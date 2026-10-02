@@ -11,15 +11,6 @@ const justPressed = {};
 
 const GAME_KEYS = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Space'];
 
-window.addEventListener('keydown', e => {
-  if (GAME_KEYS.includes(e.code)) e.preventDefault();
-  if (!keys[e.code]) justPressed[e.code] = true;
-  keys[e.code] = true;
-});
-
-window.addEventListener('keyup', e => {
-  keys[e.code] = false;
-});
 
 function pressed(code) {
   const val = justPressed[code];
